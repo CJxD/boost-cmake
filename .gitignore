@@ -1,5 +1,6 @@
 *.sw?
 *.tmp
 build*/
+boost-build/
 boost/
 boost_*.tar.xz
