@@ -3,4 +3,4 @@
 build*/
 boost-build/
 boost/
-boost_*.tar.xz
+boost_*.tar.*
