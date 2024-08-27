@@ -7,6 +7,10 @@ set(BOOST_URL "https://boostorg.jfrog.io/artifactory/main/release/1.86.0/source/
 set(BOOST_URL_SHA256 "1bed88e40401b2cb7a1f76d4bab499e352fa4d0c5f31c0dbae64e24d34d7513b" CACHE STRING "Boost download URL SHA256 checksum")
 
 include(FetchContent)
+# Use timestamp from time of extraction for files so that Boost will be rebuilt if the URL changes
+if (POLICY CMP0135)
+  cmake_policy(SET CMP0135 NEW)
+endif()
 FetchContent_Declare(
   Boost
   URL ${BOOST_URL}
