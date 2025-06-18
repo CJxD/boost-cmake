@@ -11,6 +11,9 @@ include(FetchContent)
 if (POLICY CMP0135)
   cmake_policy(SET CMP0135 NEW)
 endif()
+if (POLICY CMP0169)
+  cmake_policy(SET CMP0169 OLD)
+endif()
 FetchContent_Declare(
   Boost
   URL ${BOOST_URL}
